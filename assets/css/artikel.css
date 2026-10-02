@@ -1,0 +1,64 @@
+/* Gaya halaman artikel (Dark Theme selaras dengan website) */
+.article-page { --primary-color: #00b4ff; --text-main: rgba(255,255,255,0.85); --bg-light: #091121; --tint: rgba(0,180,255,0.08); --tint-text: #fff; }
+
+/* Area baca: gelap selaras dengan main background */
+.article-area { font-family: "Roboto", system-ui, sans-serif; background: #091121; color: var(--text-main); padding: 48px 0 64px; }
+
+.article-cover { width: 100%; border-radius: 16px; aspect-ratio: 16 / 9; object-fit: cover; background: rgba(0,180,255,0.1); }
+.article-title { font-family: "Ubuntu", sans-serif; font-weight: 700; color: #fff; font-size: clamp(1.6rem, 3.2vw, 2.3rem); line-height: 1.25; margin: 1.3rem 0 .7rem; letter-spacing: -.5px; }
+.article-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: .85rem; color: rgba(255,255,255,0.6); margin-bottom: 1.4rem; }
+.article-meta i { margin-right: 5px; color: #00b4ff; }
+
+.article-wrapper { position: relative; z-index: 10; }
+.article-content { background: rgba(255,255,255,0.02); padding: 1.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.05); font-family: "Lora", Georgia, serif; font-size: 1.12rem; line-height: 1.9; color: rgba(255,255,255,0.8); }
+.article-content p { margin-bottom: 1.5rem; }
+.article-content h2 { font-family: "Ubuntu", sans-serif; font-weight: 700; color: #fff; margin: 2.6rem 0 1.1rem; font-size: 1.45rem; display: flex; align-items: center; gap: 8px; scroll-margin-top: 90px; }
+.article-content h2 .num { color: var(--primary-color); }
+.article-content figure { margin: 0 0 1.8rem; }
+.article-content figure img { width: 100%; border-radius: 12px; aspect-ratio: 16 / 9; object-fit: cover; }
+.article-content figcaption { text-align: center; font-style: italic; font-size: .9rem; color: rgba(255,255,255,0.5); margin-top: .6rem; }
+
+/* Kotak Baca Juga / Pro Tip */
+.price-box { background: var(--tint); border-left: 4px solid var(--primary-color); padding: 1rem 1.5rem; border-radius: 0 12px 12px 0; font-family: "Ubuntu", sans-serif; font-size: 1rem; color: var(--tint-text); margin-bottom: 2rem; display: block; }
+.price-box a { color: var(--primary-color); font-weight: 600; text-decoration: underline; }
+
+/* Daftar isi */
+.toc-box { background: rgba(0,180,255,0.05); border-left: 4px solid var(--primary-color); border-radius: 8px; padding: 1rem 1.25rem; margin: 0 0 2rem; font-family: "Ubuntu", sans-serif; }
+.toc-box summary { cursor: pointer; font-weight: 600; color: #fff; list-style: none; display: flex; align-items: center; justify-content: space-between; }
+.toc-box summary::-webkit-details-marker { display: none; }
+.toc-box summary i.bi-chevron-down { transition: transform 0.3s ease; }
+.toc-box[open] summary i { transform: rotate(180deg); }
+.toc-list { list-style: none; padding: 0; margin: .6rem 0 0; }
+.toc-list a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: .95rem; display: block; padding: .6rem 0; border-bottom: 1px dashed rgba(255,255,255,0.1); transition: color .2s, padding .2s; }
+.toc-list a:hover { color: var(--primary-color); padding-left: 8px; font-weight: 600; }
+.toc-list li:last-child a { border-bottom: none; }
+
+/* Sidebar */
+.sidebar-card { background: rgba(255,255,255,0.02); border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 4px 20px rgba(0,0,0,0.2); padding: 1.5rem; margin-bottom: 1.5rem; transition: transform .3s ease; }
+.sidebar-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,180,255,0.1); border-color: rgba(0,180,255,0.3); }
+.sidebar-card h3 { font-family: "Ubuntu", sans-serif; font-size: 1.05rem; font-weight: 700; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: .75rem; margin-bottom: 1rem; }
+.side-item { display: flex; gap: .8rem; margin-bottom: 1rem; color: rgba(255,255,255,0.85); font-size: .88rem; font-weight: 600; line-height: 1.35; text-decoration: none; }
+.side-item:hover { color: var(--primary-color); }
+.side-item img { width: 62px; height: 62px; border-radius: 8px; object-fit: cover; flex: none; background: rgba(0,180,255,0.1); border: 1px solid rgba(255,255,255,0.05); }
+.side-item small { display: block; font-weight: 400; color: rgba(255,255,255,0.5); margin-top: 2px; }
+.sidebar-card .btn-side { display: block; text-align: center; border: 1px solid var(--primary-color); color: var(--primary-color); border-radius: 50px; padding: .55rem; font-weight: 600; font-size: .9rem; text-decoration: none; transition: background 0.3s; }
+.sidebar-card .btn-side:hover { background: var(--primary-color); color: #fff; }
+
+/* Penulis & bagikan */
+.author-box { background: rgba(255,255,255,0.02); border-radius: 16px; padding: 1.6rem; margin-top: 2.5rem; border: 1px solid rgba(255,255,255,0.05); font-family: "Ubuntu", sans-serif; display: flex; gap: 1rem; align-items: center; }
+.author-box .avatar { width: 68px; height: 68px; border-radius: 50%; flex: none; background: rgba(0,180,255,0.1); border: 1px solid rgba(0,180,255,0.3); color: var(--primary-color); display: grid; place-items: center; font-size: 1.8rem; }
+.author-box strong { color: #fff; display: block; }
+.author-box p { margin: 4px 0 0; font-size: .9rem; color: rgba(255,255,255,0.6); }
+.share-row { display: flex; align-items: center; gap: .6rem; margin-top: 1.6rem; font-family: "Ubuntu", sans-serif; font-size: .9rem; color: rgba(255,255,255,0.6); }
+.share-btn { width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; color: #fff; font-size: 1.1rem; transition: transform .2s, opacity .2s; }
+.share-btn:hover { transform: scale(1.08); opacity: .9; color: #fff; }
+
+@media (max-width: 768px) {
+  .article-area { padding: 32px 0 48px; }
+  .article-content { padding: 1.1rem; border-radius: 12px; font-size: 1.05rem; }
+  .article-wrapper { margin-top: 0; }
+  .author-box { flex-direction: column; text-align: center; }
+  .sticky-top { position: static !important; }
+}
+
+.article-cover, .article-content figure img { height: auto; }
